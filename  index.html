@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VELORA - Luxury Streetwear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">VELORA</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Redefining Street Luxury</h1>
+  <p>New 2026 Collection Out Now</p>
+  <button onclick="scrollToShop()">Shop Now</button>
+</section>
+
+<section class="categories">
+  <h2>Shop By Category</h2>
+  <div class="category-buttons">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('tshirt')">T-Shirts</button>
+    <button onclick="filterProducts('hoodie')">Hoodies</button>
+    <button onclick="filterProducts('pants')">Pants</button>
+    <button onclick="filterProducts('accessory')">Accessories</button>
+  </div>
+</section>
+
+<section id="shop" class="products">
+  <h2>Featured Products</h2>
+  <div id="product-container" class="product-grid"></div>
+</section>
+
+<section class="about" id="about">
+  <h2>About VELORA</h2>
+  <p>
+    VELORA blends luxury aesthetics with modern street culture.
+    Designed for creators, leaders, and trendsetters worldwide.
+  </p>
+</section>
+
+<section class="newsletter">
+  <h2>Join Our Newsletter</h2>
+  <input type="email" placeholder="Enter your email">
+  <button>Subscribe</button>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 VELORA. All Rights Reserved.</p>
+</footer>
+
+<div class="cart-sidebar" id="cart-sidebar">
+  <h3>Your Cart</h3>
+  <div id="cart-items"></div>
+  <p>Total: ₹<span id="cart-total">0</span></p>
+  <button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
